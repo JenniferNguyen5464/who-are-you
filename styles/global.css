@@ -1,0 +1,115 @@
+
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfaf6;
+  color: #333;
+}
+header, footer {
+  background-color: #f4e7d4;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+}
+nav a:hover {
+  color: #ad6b4d;
+}
+.content {
+  padding: 2rem;
+}
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
+}
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.img-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: #e0dcd7;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.text-placeholder {
+  background-color: #f9f5f1;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Light and dark theme */
+:root {
+  --bg: #fdfaf6;
+  --text: #333;
+  --accent: #ad6b4d;
+  --card: #fff;
+  --placeholder: #f9f5f1;
+  --image-bg: #e0dcd7;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f1f1f1;
+  --accent: #f6c177;
+  --card: #2a2a2a;
+  --placeholder: #333;
+  --image-bg: #444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--card);
+}
+
+.img-placeholder {
+  background-color: var(--image-bg);
+}
+
+.text-placeholder {
+  background-color: var(--placeholder);
+}
+
+/* Button for dark mode */
+.toggle-theme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.toggle-theme:hover {
+  background: var(--text);
+}
