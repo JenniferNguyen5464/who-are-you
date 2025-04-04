@@ -113,3 +113,17 @@ body {
 .toggle-theme:hover {
   background: var(--text);
 }
+
+
+header, footer {
+  background-color: var(--header-footer);
+  transition: background-color 0.3s ease;
+}
+
+:root {
+  --header-footer: #f4e7d4;
+}
+
+body.dark {
+  --header-footer: #111;
+}
