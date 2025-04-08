@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.createElement('button');
   toggleBtn.className = 'toggle-theme';
   toggleBtn.textContent = 'Toggle Theme';
+  toggleBtn.setAttribute = ('aria-label','Toggle Light and dark mode');
   document.body.appendChild(toggleBtn);
 
   toggleBtn.addEventListener('click', () => {
