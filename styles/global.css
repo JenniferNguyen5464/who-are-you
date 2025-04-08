@@ -111,3 +111,64 @@ main {
     display: flex;
   }
 }
+:root {
+  --bg-color: #fdfaf6;
+  --text-color: #333;
+  --accent-color: #ad6b4d;
+  --header-footer-color: #f4e7d4;
+  --card-bg: #fff;
+  --hover-link: #ad6b4d;
+  --visited-link: #6b4d3c;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --accent-color: #f6c177;
+  --header-footer-color: #2c2c2c;
+  --card-bg: #2a2a2a;
+  --hover-link: #f6c177;
+  --visited-link: #c1a57b;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+  background-color: var(--header-footer-color);
+  transition: background-color 0.3s ease;
+}
+
+.card {
+  background-color: var(--card-bg);
+  transition: background-color 0.3s ease;
+}
+
+nav a {
+  color: var(--text-color);
+}
+
+nav a:hover {
+  color: var(--hover-link);
+}
+
+nav a:visited {
+  color: var(--visited-link);
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}

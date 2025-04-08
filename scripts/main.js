@@ -1,9 +1,21 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-  const toggleBtn = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav');
+  // Dark mode toggle button
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'toggle-theme';
+  toggleBtn.textContent = 'Toggle Theme';
+  document.body.appendChild(toggleBtn);
 
   toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    document.body.classList.toggle('dark');
   });
+
+  // Hamburger menu
+  const navToggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav');
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
 });
+
