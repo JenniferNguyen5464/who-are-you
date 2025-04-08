@@ -172,3 +172,8 @@ nav a:visited {
   font-weight: bold;
   transition: background 0.3s ease;
 }
+
+a:focus, button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
